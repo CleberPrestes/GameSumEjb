@@ -1,0 +1,9 @@
+br\jsf\JsfPessoa2.class
+br\model\Resultado.class
+br\model\CrudPessoa.class
+br\resources\JavaEE8Resource.class
+br\ejb\EjbPessoa.class
+br\ejb\EjbRandom.class
+br\JAXRSConfiguration.class
+br\jsf\JsfRandom.class
+br\model\Pessoa.class

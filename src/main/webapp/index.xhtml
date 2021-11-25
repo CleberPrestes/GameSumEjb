@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title> TarefaEJB</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+        <div class="container-fluid ">
+            <div class="jumbotron mt-5 row d-flex justify-content-center">
+                Especialização Java - Cleber Prestes -Enterprise Java Beans - TarefaEJB
+            </div>
+            
+        
+        
+        <h:form>
+            
+             <br/>
+             <div class="row d-flex justify-content-center">
+             <h:commandButton value="Sortear Numeros" action="${jsfPessoa2.sortear()}" class="btn btn-warning mr-3 row d-flex justify-content-center" />
+             </div>
+             <br/>
+             <div class="row d-flex justify-content-center">
+             Qual a soma?
+                       
+             <h:outputText value="${jsfPessoa2.valorA}" />
+            
+            +<h:outputText value="${jsfPessoa2.valorB}" />
+           </div>
+           
+             <div class="row d-flex justify-content-center">
+                 Soma:<h:inputText value="${jsfPessoa2.palpiteUsuario}" />
+             </div>
+            <br/>
+            <div class="row d-flex justify-content-center">
+                Nome:<h:inputText value="${jsfPessoa2.nome}"  />
+             </div>
+              <br/>
+            <div class="row d-flex justify-content-center">
+            <h:commandButton value="Adicionar usuario e Verificar" action="${jsfPessoa2.addPessoa()}" class="btn btn-primary"/>
+            </div>
+              <div class="row d-flex justify-content-center">
+              <br/>
+            <h:outputText value="${jsfPessoa2.resultJogo2}" class="text-danger"/>
+           </div>
+         </h:form>
+            
+            <div class="text-light bg-dark">
+               Lista de Jogadores  
+            </div>
+                        
+        
+        <h:form>
+            <h:dataTable value="#{jsfPessoa2.all}" var="pessoa" class="table table-striped table-hover mt-5">
+              
+                    <h:column>
+                    Jogador:   <h:outputText value="#{pessoa.nome}"/>
+                    </h:column>
+                    <h:column>
+                    Pontos:  <h:outputText value="#{pessoa.pontos}"/>
+                    </h:column>
+                 
+                
+            </h:dataTable>
+                 
+        </h:form>
+        
+        </div>
+    </h:body>
+</html>
+
